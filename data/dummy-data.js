@@ -44,9 +44,9 @@ const PRODUCTS = [
   new Product(
     "p6",
     "u1",
-    "Pen & Paper",
+    "Pen & PaperPen & PaperPen & PaperPen & Paper",
     "https://cdn.pixabay.com/photo/2015/10/03/02/14/pen-969298_1280.jpg",
-    "Can be used for role-playing (not the kind of role-playing you're thinking about...).",
+    "Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).Can be used for role-playing (not the kind of role-playing you're thinking about...).",
     5.49
   ),
 ];
