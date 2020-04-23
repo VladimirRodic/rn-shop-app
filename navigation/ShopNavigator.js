@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
 import ProductsOverviewScreen from "../screens/shop/ProductsOverviewScreen";
+import ProductDetailScreen from "../screens/shop/ProductDetailScreen";
 
 const defaultNavOptions = {
   headerStyle: {
@@ -20,6 +21,11 @@ const ProductsNavigator = () => {
         <ProductsStackNavigator.Screen
           name="All Products"
           component={ProductsOverviewScreen}
+        />
+        <ProductsStackNavigator.Screen
+          name="Product Detail"
+          component={ProductDetailScreen}
+          options={({ route }) => ({ title: route.params.title })}
         />
       </ProductsStackNavigator.Navigator>
     </NavigationContainer>
