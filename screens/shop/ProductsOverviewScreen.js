@@ -19,13 +19,13 @@ const ProductsOverviewScreen = ({ navigation }) => {
           price={itemData.item.price}
           itemId={itemData.item.id}
           navigation={navigation}
-          /*
           // I wanted to define function here and call it inside of
           // the  ProductItem component
           //
           // I was not able to navigate by calling this function
           // inside of ProductItem.js with
           // onPress={()=>onViewDetails}
+          /*
           onViewDetails={() =>
             navigation.navigate("Product Detail", {
               itemId: props.itemId,

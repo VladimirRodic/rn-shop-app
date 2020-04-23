@@ -14,7 +14,7 @@ const ProductItem = (props) => {
         <Button
           title="View Details"
           // here I wanted to call
-          // onPress={()=>props.onViewSelected}
+          // onPress={props.onViewDetails}
           onPress={() =>
             props.navigation.navigate("Product Detail", {
               itemId: props.itemId,
