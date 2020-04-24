@@ -9,15 +9,8 @@ import {
 } from "react-native";
 
 const ProductItem = (props) => {
-  const handleOnViewDetails = props.onViewDetails;
-  const navigateToDetailsScreen = () => {
-    props.navigation.navigate("Product Detail", {
-      itemId: props.itemId,
-      title: props.title,
-    });
-  };
   return (
-    <TouchableOpacity onPress={navigateToDetailsScreen}>
+    <TouchableOpacity onPress={props.onViewDetails}>
       <View style={styles.container}>
         {/* You must set image width and height for remote images in order to be able to see it */}
         <Image style={styles.image} source={{ uri: props.image }} />
@@ -29,7 +22,7 @@ const ProductItem = (props) => {
           <Button
             title="View Details"
             // here I wanted to call
-            onPress={handleOnViewDetails}
+            onPress={props.onViewDetails}
             //onPress={navigateToDetailsScreen}
           />
           <Button title="To Cart" />
