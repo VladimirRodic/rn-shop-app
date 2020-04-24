@@ -29,7 +29,7 @@ const ProductItem = (props) => {
           <Button
             title="View Details"
             // here I wanted to call
-            onPress={props.handleOnViewDetails}
+            onPress={handleOnViewDetails}
             //onPress={navigateToDetailsScreen}
           />
           <Button title="To Cart" />
