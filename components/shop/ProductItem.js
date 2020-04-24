@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 const ProductItem = (props) => {
+  const handleOnViewDetails = props.onViewDetails;
   const navigateToDetailsScreen = () => {
     props.navigation.navigate("Product Detail", {
       itemId: props.itemId,
@@ -28,8 +29,8 @@ const ProductItem = (props) => {
           <Button
             title="View Details"
             // here I wanted to call
-            // onPress={props.onViewDetails}
-            onPress={navigateToDetailsScreen}
+            onPress={props.handleOnViewDetails}
+            //onPress={navigateToDetailsScreen}
           />
           <Button title="To Cart" />
         </View>

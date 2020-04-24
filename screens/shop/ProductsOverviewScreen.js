@@ -2,12 +2,14 @@
 import React from "react";
 import { FlatList, Text } from "react-native";
 import { useSelector } from "react-redux";
+import { useNavigation } from "@react-navigation/native";
 
 import ProductItem from "../../components/shop/ProductItem";
 
 // create a component
 const ProductsOverviewScreen = ({ navigation }) => {
   const products = useSelector((state) => state.products.availableProducts);
+  const theNavigation = useNavigation();
 
   return (
     <FlatList
@@ -25,14 +27,15 @@ const ProductsOverviewScreen = ({ navigation }) => {
           // I was not able to navigate by calling this function
           // inside of ProductItem.js with
           // onPress={()=>onViewDetails}
-          /*
-          onViewDetails={() =>
-            navigation.navigate("Product Detail", {
+          //
+          onViewDetails={() => {
+            alert("works");
+            theNavigation.navigate("Product Detail", {
               itemId: props.itemId,
               title: props.title,
-            })
-          }
-          */
+            });
+          }}
+          //
         />
       )}
     />
