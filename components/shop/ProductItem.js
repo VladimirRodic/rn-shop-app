@@ -7,8 +7,13 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import { useDispatch } from "react-redux";
+
+import * as cartActions from "../../store/actions/cart";
 
 const ProductItem = (props) => {
+  const dispatch = useDispatch();
+
   return (
     <TouchableOpacity onPress={props.onViewDetails}>
       <View style={styles.container}>
@@ -25,7 +30,12 @@ const ProductItem = (props) => {
             onPress={props.onViewDetails}
             //onPress={navigateToDetailsScreen}
           />
-          <Button title="To Cart" />
+          <Button
+            title="To Cart"
+            onPress={() => {
+              dispatch(cartActions.addToCart(props.product));
+            }}
+          />
         </View>
       </View>
     </TouchableOpacity>

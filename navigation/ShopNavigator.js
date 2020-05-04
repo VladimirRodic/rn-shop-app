@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import ProductsOverviewScreen from "../screens/shop/ProductsOverviewScreen";
 import ProductDetailScreen from "../screens/shop/ProductDetailScreen";
+import CartScreen from "../screens/shop/CartScreen";
 
 const defaultNavOptions = {
   headerStyle: {
@@ -26,6 +27,11 @@ const ProductsNavigator = () => {
           name="Product Detail"
           component={ProductDetailScreen}
           options={({ route }) => ({ title: route.params.title })}
+        />
+        <ProductsStackNavigator.Screen
+          name="Cart Screen"
+          component={CartScreen}
+          options={{ title: "Cart" }}
         />
       </ProductsStackNavigator.Navigator>
     </NavigationContainer>
