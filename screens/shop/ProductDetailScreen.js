@@ -8,14 +8,33 @@ import {
   Button,
   StyleSheet,
 } from "react-native";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { HeaderButtons, Item } from "react-navigation-header-buttons";
+
+import CustomHeaderButton from "../../components/UI/headerButton";
+import * as cartActions from "../../store/actions/cart";
 
 // create a component
-const ProductDetailScreen = ({ route }) => {
+const ProductDetailScreen = ({ route, navigation }) => {
+  // navigation cart button
+  navigation.setOptions({
+    headerRight: () => (
+      <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+        <Item
+          title="cart"
+          iconName="md-cart"
+          onPress={() => navigation.navigate("Cart Screen")}
+        />
+      </HeaderButtons>
+    ),
+  });
+
   const itemId = route.params.itemId;
   const product = useSelector((state) =>
     state.products.availableProducts.find((item) => item.id === itemId)
   );
+
+  const dispatch = useDispatch();
 
   return (
     <ScrollView style={styles.container}>
@@ -24,7 +43,12 @@ const ProductDetailScreen = ({ route }) => {
         <Text style={styles.title}>{product.title}</Text>
         <Text>Seller ID: {product.ownerId}</Text>
         <Text style={styles.price}>${product.price}</Text>
-        <Button title="To cart" onPress={() => {}} />
+        <Button
+          title="Add to cart"
+          onPress={() => {
+            dispatch(cartActions.addToCart(product));
+          }}
+        />
         <Text style={styles.description}>{product.description}</Text>
       </View>
     </ScrollView>
