@@ -9,8 +9,7 @@ import ProductItem from "../../components/shop/ProductItem";
 
 // create a component
 const ProductsOverviewScreen = ({ navigation }) => {
-  const products = useSelector((state) => state.products.availableProducts);
-
+  // navigation cart button
   navigation.setOptions({
     headerRight: () => (
       <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
@@ -22,6 +21,8 @@ const ProductsOverviewScreen = ({ navigation }) => {
       </HeaderButtons>
     ),
   });
+
+  const products = useSelector((state) => state.products.availableProducts);
 
   return (
     <FlatList
